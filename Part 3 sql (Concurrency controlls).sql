@@ -21,9 +21,9 @@ COMMIT;
 -- The commit also ends the transaction
 
 -- Simulating Transaction 2 (Taylor's order)
-
 START TRANSACTION;
 
+-- Taylor also buys 5 units of the same speaker so we lock that row up and decrease the quantity before releasing
 SELECT stock_quantity
 FROM inventory
 WHERE product_id = @smart_speaker_id
