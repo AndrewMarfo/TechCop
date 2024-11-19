@@ -1,66 +1,66 @@
 Explanation to my design choices for primary and foreign keys in each normalized table
 
 After breaking the table down into separate tables, I got 5 tables. The tables were:
-1. Customer table 
-2. Products table 
-3. Order table
-4. Inventory table
-5. Order Details table
+    1. Customer table 
+    2. Products table 
+    3. Order table
+    4. Inventory table
+    5. Order Details table
 The breakdown of the tables are as follows
 1. Customer table:
 The customer table will store data about customers. The customers table had four attributes. The attributes were:
-a. customer_id (I introduced this attribute to uniquely identify the customer’s table. i.e the primary key)
-b. customer_name
-c. customer_email
-d. customer_address
+    a. customer_id (I introduced this attribute to uniquely identify the customerï¿½s table. i.e the primary key)
+    b. customer_name
+    c. customer_email
+    d. customer_address
 The customer_address had two values from my observations. The values were country and city. This is a violation of the 1st Normal Form, so I created two tables called city and country tables to store the customer_address and reference it in the customer_table.
 The attributes of the country table were:
-a. country_id (Primary key to uniquely identify each country in this table)
-b. country_name
+    a. country_id (Primary key to uniquely identify each country in this table)
+    b. country_name
 The attributes of the city table were:
-a. city_id (Primary key to uniquely identify each city)
-b. city_name
-c. country_id (Foreign key to reference the corresponding country which the city can be found in)
+    a. city_id (Primary key to uniquely identify each city)
+    b. city_name
+    c. country_id (Foreign key to reference the corresponding country which the city can be found in)
 After breaking down the customer_address into different tables, the customer table now had the following attributes:
-a. customer_id (Primary key to uniquely identify each customer)
-b. customer_name
-c. customer_email
-d. city_id (Foreign key referencing country)
+    a. customer_id (Primary key to uniquely identify each customer)
+    b. customer_name
+    c. customer_email
+    d. city_id (Foreign key referencing country)
 
 2. Products table
 The products table will store data about products. The products table has four attributes.
 The attributes are:
-a. product_id (Primary key to uniquely identify each product)
-b. product_name
-c. price
-d. category
+    a. product_id (Primary key to uniquely identify each product)
+    b. product_name
+    c. price
+    d. category
 
 3. Orders table
 The orders table will store details about the orders placed by customers. The orders table has five attributes. The attributes are:
-a. order_id (Primary Key to uniquely identify each order placed)
-b. order_date
-c. customer_id (Foreign Key to reference the customer who placed this order)
+    a. order_id (Primary Key to uniquely identify each order placed)
+    b. order_date
+    c. customer_id (Foreign Key to reference the customer who placed this order)
 
 4. Inventory table
 The inventory table will store data about products, the number of products left and the supplier of that product. The inventory table have four attributes. The attributes are:
-a. supplier_id (Primary Key to uniquely identify each supplier)
-b. supplier_name
-c. stock_quantity
-d. product_id (Foreign Key to reference the product the supplier supplies)
+    a. supplier_id (Primary Key to uniquely identify each supplier)
+    b. supplier_name
+    c. stock_quantity
+    d. product_id (Foreign Key to reference the product the supplier supplies)
 
 5. Order Details table
 The order details table will store data about order items that makes up an order. The orders table have 5 attributes. The attributes are:
-a. order_details_id (Primary Key to uniquely identify a specific product ordered in an order)
-b. order_id (Foreign Key to reference the order which this order detail is part of)
-c. quantity
-d. product_id
-e. total
+    a. order_details_id (Primary Key to uniquely identify a specific product ordered in an order)
+    b. order_id (Foreign Key to reference the order which this order detail is part of)
+    c. quantity
+    d. product_id
+    e. total
 
 After considering all the possible scenarios, the number of tables amounted to 6 tables. They are:
-1. Customer table
-2. City table
-3. Country table
-4. Products table
-5. Orders table
-6. Inventory table
-7. Order Details table
+    1. Customer table
+    2. City table
+    3. Country table
+    4. Products table
+    5. Orders table
+    6. Inventory table
+    7. Order Details table
