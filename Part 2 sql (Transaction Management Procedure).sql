@@ -13,6 +13,9 @@ CREATE PROCEDURE PlaceOrder(
     IN secondProductQuantity INT
 )
 BEGIN
+	DECLARE CONTINUE HANDLER FOR SQLEXCEPTION
+		ROLLBACK;
+    
     -- Start transaction
     START TRANSACTION;
 
@@ -41,7 +44,7 @@ BEGIN
     SET stock_quantity = stock_quantity - secondProductQuantity
     WHERE product_id = secondProductId;
 
-    -- Commit the transaction
+    -- Commit the transactionPlaceOrder
     COMMIT;
 END //
 
