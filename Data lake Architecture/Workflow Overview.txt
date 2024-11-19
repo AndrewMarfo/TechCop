@@ -1,0 +1,13 @@
+Workflow Overview
+
+1. Data Ingestion:
+    Data from the data sources (MySql and MongoDb) is ingested into the 
+    Azure Data Lake Storage Gen2 and Azul SQL database using Azure Data Factory.
+2. Data Storage: 
+    Azure Data Lake Storage Gen2 and Azure SQL database are the storage tools for 
+    storing the data being ingested.
+3. Data Processing:
+    The Azure Databricks combines Apache Spark, Delta Lake and machine learning to process the stored data.
+4. Data Analyses and Visualization:
+    The processed data is stored in Azure Synapse Analytics for analyses. 
+    Power Bi connects to the Azure Synapse Analytics to create interactive dashboards and reports.
