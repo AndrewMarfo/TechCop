@@ -1,0 +1,33 @@
+db.Products.insertMany([
+  {
+   	 "product_id": "P004",
+   	 "name": "Samsung Galaxy S23",
+   	 "brand": "Samsung",
+    	"category": "Electronics",
+    	"price": 450.99,
+   	 "specification": {
+     		 "ram_gb": 12,
+      		"storage": 128,
+      		"size": 6.4,
+     		 "os": "Android 12"
+    	}
+  },
+  {
+   	 "product_id": "P005",
+   	 "name": "Women's Skirt",
+   	 "category": "Clothing",
+   	 "size": 7,
+    	"color": "Red",
+   	 "material": "Linen",
+   	 "price": 39.99
+  },
+  {
+    	"product_id": "P006",
+    	"name": "Circle",
+   	 "author": "Madeline Miller",
+   	 "category": "Books",
+    	"genre": "Fiction",
+   	 "ISBN": "978-00845982049",
+    	"price": 20.99
+  }
+]);
