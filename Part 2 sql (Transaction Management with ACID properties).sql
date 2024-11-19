@@ -34,5 +34,5 @@ UPDATE inventory
 SET stock_quantity = stock_quantity - @2nd_product_quantity
 WHERE product_id = @2nd_product_id;
 
--- commit the transaction
+-- save the transaction
 COMMIT;
