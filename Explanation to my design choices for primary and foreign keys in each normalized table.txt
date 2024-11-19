@@ -64,3 +64,15 @@ After considering all the possible scenarios, the number of tables amounted to 6
     5. Orders table
     6. Inventory table
     7. Order Details table
+
+
+ How normalization helps reduce redundancy and improve data integrity.
+    Normalization is a technique used in database design to reduce redundancy and improve data integrity. 
+    It involves structuring data into smaller, related tables, ensuring that each piece of data is stored only once. 
+    This minimizes duplication and eliminates inconsistencies, as changes made to one table are automatically reflected in related tables. 
+    By breaking down large tables into smaller, more focused ones, normalization also improves query performance and simplifies data management. 
+    This makes databases more efficient, reliable, and easier to maintain.
+
+Potential trade-offs and when denormalization might be necessary.
+    By denormalizing, certain data can be stored together, reducing the number of joins required for queries and improving query performance.
+    But also, denormalization can increase data redundancy and make data maintenance more complex.
